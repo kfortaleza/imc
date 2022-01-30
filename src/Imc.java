@@ -46,7 +46,7 @@ public class Imc {
 		} else if (imc >= 35 && imc < 40) {
 			System.out.println("Obesidade II.");
 			
-		} else (imc >= 40 ) {
+		} else if (imc >= 40 ) {
 			System.out.println("Obesidade III.");
 			
 		}
