@@ -1,34 +1,14 @@
-import java.util.Scanner;
 
 public class Imc {
-
-	public static void main(String[] args) {
-		
-		// Declaração de Variáveis
-		String nomeDoUsuario;
-		int pesoDoUsuario;
-		double alturaDoUsuario,imc;
-		
-		// Ler o teclado do usuário
-		Scanner leitor = new Scanner(System.in);
-		
-		// Início
-		System.out.println("Qual o seu nome? ");
-		nomeDoUsuario = leitor.next();
 	
-		System.out.print(nomeDoUsuario + ", digite seu peso:\n");
-		pesoDoUsuario = leitor.nextInt();		
+	double calcularImc(int pesoDoUsuario, double alturaDoUsuario) {
 		
-		System.out.print(nomeDoUsuario + ", digite sua altura:\n");
-		alturaDoUsuario = leitor.nextDouble();
+		double imc = pesoDoUsuario / (alturaDoUsuario * alturaDoUsuario);	
+		return imc;
 		
-		leitor.close();
-		
-		imc = pesoDoUsuario / (alturaDoUsuario * alturaDoUsuario);
-		
-		System.out.println(nomeDoUsuario + ", seu IMC é " + imc);
-		
-		System.out.println("-------------------------------------------");
+	}
+	
+	void classificarImc(double imc) {
 		
 		// Determinar a classificação do IMC
 		if (imc < 18.5) {
@@ -46,11 +26,13 @@ public class Imc {
 		} else if (imc >= 35 && imc < 40) {
 			System.out.println("Obesidade II.");
 			
-		} else if (imc >= 40 ) {
+		} else {
 			System.out.println("Obesidade III.");
 			
 		}
-
+	
+		
 	}
 
+	
 }
