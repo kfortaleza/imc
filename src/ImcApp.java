@@ -33,7 +33,6 @@ public class ImcApp {
 		
 		imc.classificarImc(valorImc);
 
-
 	} 
 
 }
